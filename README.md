@@ -31,7 +31,7 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
+- has_many :posts
 - belongs_to :user
 
 
@@ -45,7 +45,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :posts
-- has_many :comments
+- has_many :groups_users
 
 
 ## postsテーブル
@@ -56,6 +56,6 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
-- has_many :comments
+- belongs_to :groups_users
+- belongs_to :users
 
