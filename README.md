@@ -23,39 +23,54 @@ Things you may want to cover:
 
 * ...
 
-## groups_usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- has_many :posts
-- belongs_to :user
 
 
-## usersテーブル
-
+## userテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
 |username|string|null: false|
-
 ### Association
-- has_many :posts
 - has_many :groups_users
+- has_many :group
+- has_many :messages
 
 
-## postsテーブル
+## groups_usersテーブル 
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|messages_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :group
+- belongs_to :messages
+
+
+## groupテーブル
+|Column|Type|Options|
+|------|----|-------|
+|group_id|integer|null: false, foreign_key: true|
+|member_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- has_many :user
+- has_many :groups_users
+- has_many :messages
+
+
+
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
 |text|text||
 |user_id|integer|null: false, foreign_key: true|
-
 ### Association
-- belongs_to :groups_users
-- belongs_to :users
+- belongs_to :user
+ has_many :groups_users
+- belongs_to :group
+
 
