@@ -50,7 +50,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :groups_users
 - has_many :messages
