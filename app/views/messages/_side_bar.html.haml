@@ -1,0 +1,19 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__user
+      .side-header__user__name
+        username
+    
+      %ul.side-bar__header__icon
+        %li.side-bar__header__icon__edit
+          = link_to "#" do
+            = icon("fas", "edit")
+        %li.side-bar__header__icon__group
+          = link_to "#" do
+            = icon("fas", "cog")
+  .groups
+    .groups_main
+      .groups_main-name
+        こんにちは
+      .groups_main-message
+        おはよう
