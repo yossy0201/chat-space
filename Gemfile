@@ -65,5 +65,3 @@ gem 'haml-rails'
 gem "haml-rails"
 gem 'listen'
 gem 'font-awesome-sass'
-gem 'devise'
-gem 'meta-tags'

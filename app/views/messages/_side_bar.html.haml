@@ -1,17 +1,16 @@
 .side-bar
   .side-bar__header
     .side-bar__header__user
-      = current_user.name
       .side-header__user__name
-        
+        username
     
       %ul.side-bar__header__icon
         %li.side-bar__header__icon__edit
           = link_to "#" do
             = icon("fas", "edit")
         %li.side-bar__header__icon__group
-          = link_to edit_user_path(current_user) do
-            = icon('fas', 'cog', class: 'icon')
+          = link_to "#" do
+            = icon("fas", "cog")
   .groups
     .groups_main
       .groups_main-name
