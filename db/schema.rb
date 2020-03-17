@@ -44,4 +44,5 @@ ActiveRecord::Schema.define(version: 2020_03_17_030427) do
 
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
+
 end
