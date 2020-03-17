@@ -3,18 +3,18 @@
     .side-bar__header__user
       = current_user.name
       .side-header__user__name
-        
-    
       %ul.side-bar__header__icon
         %li.side-bar__header__icon__edit
-          = link_to "#" do
+          = link_to new_group_path do
             = icon("fas", "edit")
         %li.side-bar__header__icon__group
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .groups
-    .groups_main
-      .groups_main-name
-        こんにちは
-      .groups_main-message
-        おはよう
+    - current_user.groups.each do |group|
+      .groups_main
+        = link_to  do
+          .groups_main-name
+            = group.name
+          .groups_main-message
+            メッセージはまだありません。
