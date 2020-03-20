@@ -1,0 +1,9 @@
+.chat-bar__header__contents__data
+  .chat-bar__header__contents__data__info
+    %p.chat-bar__header__contents__data__info__talker
+      = message.user.name
+    %p.chat-bar__header__contents__data__info__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  %p.chat-bar__header__contents__data__text
+    = message.content
+= image_tag message.image.url, class: 'lower-message__image' if message.image.present?

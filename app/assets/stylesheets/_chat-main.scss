@@ -12,7 +12,7 @@
       &__left {
         font-size: 20px;
         color: #333;
-        padding-top: 35px;
+        padding-top: 20px;
         &__members {
           display: flex;
           font-size: 12px;
@@ -22,6 +22,7 @@
         a{
           text-decoration: none;
           color: #38aef0;
+          
           
         }
         &__button {
@@ -42,27 +43,28 @@
         padding: 46px 40px;
         background-color: #fafafa;
         overflow: scroll;
-        
-        &__info{
-          &__talker{
+        &__data  {
+          &__info{
+            display: flex;
+            &__talker{
+              color: #434a54;
+              font-size: 16px;
+              font-weight: bold;
+      
+            }
+            &__date{
+              color: #999999;
+              font-size: 12px;
+              margin-left: 10px;
+              margin-left: 10px;
+              
+            }
+          }
+          &__text{
             color: #434a54;
-            font-size: 16px;
-            font-weight: bold;
-    
+            font-size: 14px;
+            margin-bottom: 10px;
           }
-          &__date{
-            color: #999999;
-            font-size: 12px;
-            margin-left: 10px;
-            margin-left: 10px;
-            
-          }
-        }
-        &__text{
-          color: #434a54;
-          font-size: 14px;
-          margin-bottom: 10px;
-          
         }
       }
     }
