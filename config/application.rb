@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module ChatSpace
   class Application < Rails::Application
     config.load_defaults 5.2
@@ -16,5 +18,6 @@ module ChatSpace
       g.helper false
       g.test_framework false
     end
+    config.time_zone = 'Tokyo'
   end
 end
