@@ -291,7 +291,6 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
-  listen
   mini_magick
   mysql2 (>= 0.4.4, < 0.6.0)
   pry-rails
